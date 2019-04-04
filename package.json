@@ -1,0 +1,53 @@
+{
+  "name": "ma-wakatime-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "lint:js": "eslint ./src",
+    "lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "path": "^0.12.7",
+    "underscore": "^1.9.1"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.5",
+    "dotenv": "^7.0.0",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "husky": "^1.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "lint-staged": "^8.1.5",
+    "mysql2": "^1.6.5",
+    "prettier": "^1.16.4",
+    "sequelize": "^5.1.1",
+    "cors": "^2.8.5",
+    "nodemon": "^1.18.10",
+    "koa-cors": "0.0.16",
+    "koa-bodyparser": "^4.2.1",
+    "koa-send": "^5.0.0"
+  },
+  "lint-staged": {
+    "src/*.js": [
+      "prettier --write",
+      "eslint --fix --max-warnings 0",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  }
+}
