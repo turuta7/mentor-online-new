@@ -1,4 +1,4 @@
-# MA WakaTime Dashboard
+# Turuta
 
 ### Install NPM packages
 
