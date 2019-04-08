@@ -29,7 +29,10 @@ app.use(async (ctx, next) => {
     ctx.url === '/top5' ||
     ctx.url === `/getCourseById/${urlID}` ||
     ctx.url === '/urlForCourse ' ||
-    ctx.url === `/getUrlById/${urlID}`
+    ctx.url === `/getUrlById/${urlID}` ||
+    ctx.url === `/updateCourseById/${urlID}` ||
+    ctx.url === `/delCourseById/${urlID}` ||
+    ctx.usr === `/subscription/${urlID}`
   )
     return next();
   const bearer = ctx.request.headers.authorization;
